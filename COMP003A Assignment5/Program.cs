@@ -14,7 +14,18 @@ namespace COMP003A_Assignment5
     {
         static void Main(string[] args)
         {
-            IsoscelesTriangleBuilder('G', 6);
+            PrintSeparator("Triangle");
+            string inputCharacter;
+            Console.Write("Enter a single character: ");
+            inputCharacter= Console.ReadLine();
+            char person = Convert.ToChar(inputCharacter);
+
+            string size;
+            Console.Write("Enter a positive whole number: ");
+            size = Console.ReadLine();
+            int number = Convert.ToInt32(size);   
+            
+            IsoscelesTriangleBuilder(person, number);
         }
 
         static void PrintSeparator()
@@ -26,13 +37,18 @@ namespace COMP003A_Assignment5
         /// This method is me calling another method into a whole different method
         /// </summary>
         /// <param name="print"></param>
-        static void PrintSeparator(string print)
+        static void PrintSeparator(string Triangle)
         {
             PrintSeparator();
-            Console.WriteLine(print);
+            Console.WriteLine(Triangle);
             PrintSeparator();
         }
 
+        /// <summary>
+        /// This part of the code is me looping a user input triangle and what the user inputs is the character of the triangle and how many rows it is
+        /// </summary>
+        /// <param name="inputCharacter"></param>
+        /// <param name="size"></param>
         static void IsoscelesTriangleBuilder(char inputCharacter, int size)
         {
 
@@ -54,5 +70,26 @@ namespace COMP003A_Assignment5
                 Console.Write("\n");
             }
         }
+
+        /// <summary>
+        /// This method is subtracting the current year "2023" minus the year my character was born to calculate their age.
+        /// </summary>
+        /// <param name="year"></param>
+        /// <returns>This returns the characters age, how old they are</returns>
+        static int AgeCalculaotr(int year)
+        {
+            return 2023 - year;
+        }
+
+        /// <summary>
+        /// This method is me getting the characters name and year they were born!
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="year"></param>
+        static void CharacterInfo(string name , int year) 
+        {
+            Console.WriteLine($"{name}, turns {year} this year!");
+        }
+
     }
 }
