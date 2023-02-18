@@ -5,6 +5,7 @@
   * 
  */
 
+using Microsoft.VisualBasic;
 using System.Collections.Generic;
 using System.Globalization;
 
@@ -17,16 +18,45 @@ namespace COMP003A_Assignment5
             PrintSeparator("Triangle");
             string inputCharacter;
             Console.Write("Enter a single character: ");
-            inputCharacter= Console.ReadLine();
+            inputCharacter = Console.ReadLine();
             char person = Convert.ToChar(inputCharacter);
 
             string size;
             Console.Write("Enter a positive whole number: ");
             size = Console.ReadLine();
-            int number = Convert.ToInt32(size);   
-            
+            int number = Convert.ToInt32(size);
+
             IsoscelesTriangleBuilder(person, number);
+
+            PrintSeparator("Favorite Characters");
+
+            string jack;
+            jack = "Jack Black";
+            int year = 1969;
+            CharacterInfo(jack, 2023 - year);
+
+            string cory;
+            cory = "CoryxKenshin";
+            int birth = 1992;
+            CharacterInfo(cory, 2023 - birth);
+
+            string steve;
+            steve = "Steve Carell";
+            int birthday = 1962;
+            CharacterInfo(steve, 2023 - birthday);
+
+            string bryan;
+            bryan = "Bryan Cranston";
+            int day = 1956;
+            CharacterInfo(bryan,2023 - day);
+
+            string aaron;
+            aaron = "Aaron Paul";
+            int age = 1979;
+            CharacterInfo(aaron,2023 - age);
         }
+
+       
 
         static void PrintSeparator()
         {
@@ -76,7 +106,7 @@ namespace COMP003A_Assignment5
         /// </summary>
         /// <param name="year"></param>
         /// <returns>This returns the characters age, how old they are</returns>
-        static int AgeCalculaotr(int year)
+        static int AgeCalculator(int year)
         {
             return 2023 - year;
         }
